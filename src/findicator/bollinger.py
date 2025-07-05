@@ -29,3 +29,4 @@ def bollinger_bands(
     upper_band = middle_band + stddev_multiplier * stddev
     lower_band = middle_band - stddev_multiplier * stddev
     return middle_band, upper_band, lower_band
+
