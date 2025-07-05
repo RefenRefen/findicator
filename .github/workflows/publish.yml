@@ -3,7 +3,7 @@ name: Publish Python 🐍 distribution 📦 to PyPI
 on:
   push:
     tags:
-      - 'v*.*.*'   # Triggers when you push a version tag like v0.1.0
+      - 'v*.*.*'   # ✅ Runs when you push tags like v0.1.0
 
 jobs:
   build-and-publish:
@@ -28,5 +28,4 @@ jobs:
       - name: 🔨 Build & Publish to PyPI
         env:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          poetry publish --build
+        run: poetry publish --build
