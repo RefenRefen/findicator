@@ -7,12 +7,12 @@ on:
 
 jobs:
   test:
-    name: Run tests
+    name: Run tests with coverage
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        python-version: ["3.13"]
+        python-version: ["3.10"]
 
     steps:
       - uses: actions/checkout@v4
@@ -28,13 +28,22 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - name: Run tests
-        run: poetry run pytest
+      - name: Run tests with coverage
+        run: |
+          poetry run pytest --cov=your_package_name --cov-report=xml
+
+      # OPTIONAL: Upload coverage report to Codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+        # Remove this step if you don't use Codecov
 
   publish:
     name: Build & Publish to PyPI
     runs-on: ubuntu-latest
-    needs: test   # ✅ This ensures it only runs if 'test' passes!
+    needs: test  # ✅ Will only run if tests pass
 
     steps:
       - uses: actions/checkout@v4
