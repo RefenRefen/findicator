@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          poetry run pytest --cov=your_package_name --cov-report=xml
+          poetry run pytest --cov=findicator --cov-report=xml
 
       # OPTIONAL: Upload coverage report to Codecov
       - name: Upload coverage to Codecov
