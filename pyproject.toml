@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "findicator"
-version = "0.1.6"
+version = "0.1.7"
 description = "A modern Python library for financial indicators"
 authors = ["Refen <abbasi.seyed.alireza@gmail.com>"]
 license = "MIT"
@@ -9,7 +9,7 @@ packages = [{ include = "findicator", from = "src" }]
 repository = "https://github.com/RefenRefen/findicator"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.14"
+python = ">=3.11,<3.14"
 pandas = "^2.0"
 
 [tool.poetry.group.dev.dependencies]
