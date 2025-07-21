@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "findicator"
-version = "0.1.7"
+version = "0.1.8"
 description = "A modern Python library for financial indicators"
 authors = ["Refen <abbasi.seyed.alireza@gmail.com>"]
 license = "MIT"
