@@ -8,6 +8,7 @@ from .ema_channel import ema_channel
 from .force_index import force_index
 from .elder_ray import elder_ray
 from .stochastic import stochastic_oscillator
+from .rsi import rsi
 
 
 __all__ = [
@@ -18,6 +19,7 @@ __all__ = [
     "ema_channel",
     "force_index",
     "elder_ray",
-    "stochastic_oscillator"
+    "stochastic_oscillator",
+    "rsi"
 ]
 
