@@ -11,8 +11,9 @@ pip install findicator
 ## Usage
 
 ```python
-from findicator import indicators
-
+from findicator import elder_ray
+import pandas as pd
 # Example: Calculate simple moving average
-result = indicators.sma(data, window=20)
+data = pd.DataFrame()
+result = elder_ray(high=data['high'], low=data['low'], close=data['close'])
 ```
